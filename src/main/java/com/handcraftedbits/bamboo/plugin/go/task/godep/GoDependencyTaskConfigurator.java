@@ -17,7 +17,7 @@
  * limitations under the License.
  * #L%
  */
-package com.handcraftedbits.bamboo.plugin.go.task.dependency;
+package com.handcraftedbits.bamboo.plugin.go.task.godep;
 
 import com.atlassian.bamboo.process.EnvironmentVariableAccessor;
 import com.atlassian.bamboo.v2.build.agent.capability.CapabilityContext;

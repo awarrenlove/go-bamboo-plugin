@@ -127,6 +127,33 @@ tree.
   follow Go conventions.  For example, if your project is located at `https://github.com/username/myproject`, the value
   of this parameter should be `github.com/username/myproject`.
 
+## Go Glide Task
+
+The **Go Glide** task will retrieve a Go project's dependencies provided they have been defined using
+[Glide](https://github.com/Masterminds/glide), i.e. there is a `glide.yaml` file available in the Go project's source
+tree.
+
+### Parameters
+
+* **GOROOT**
+
+  The value of the `GOROOT` environment variable for the Go installation used to build the Go project.  The Go Plugin
+  for Bamboo will attempt to automatically set this value using either the value of the `GOROOT` environment variable
+  defined on the Bamboo server or by using `/path/to/go/bin/..`.  If the default value isn't appropriate for your
+  build you must change it.
+* **Source path**
+
+  A relative path pointing to the directory where your Go project source code has been checked out.  This path must
+  follow Go conventions.  For example, if your project is located at `https://github.com/username/myproject`, the value
+  of this parameter should be `github.com/username/myproject`.
+* **GOPATH**
+
+  A path pointing to the directory where your Go src directory exists. This can be relative to the project directory
+  or absolute.
+* **Glide Executable path**
+
+  The absolute path to the Glide executable on the server.
+
 ## Go Test Runner Task
 
 The **Go Test Runner Task** will run a Go project's tests and save the output for parsing by the [Go Test Parser Task](#go-test-parser-task).

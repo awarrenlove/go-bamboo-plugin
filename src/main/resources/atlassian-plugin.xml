@@ -52,16 +52,29 @@
     <resource type="download" name="icon" location="com/handcraftedbits/bamboo/plugin/go/image/plugin-logo.png" />
   </taskType>
 
-  <!-- Go dependency task -->
+  <!-- Go godep task -->
   <taskType key="task.go.dependency" name="Go Dependency Fetcher"
-            class="com.handcraftedbits.bamboo.plugin.go.task.dependency.GoDependencyTaskType">
+            class="com.handcraftedbits.bamboo.plugin.go.task.godep.GoDependencyTaskType">
     <description>Fetches Go project dependencies</description>
     <category name="builder" />
     <help link="task.dependency.help.link" title="task.dependency.help.text" />
 
-    <configuration class="com.handcraftedbits.bamboo.plugin.go.task.dependency.GoDependencyTaskConfigurator" />
+    <configuration class="com.handcraftedbits.bamboo.plugin.go.task.godep.GoDependencyTaskConfigurator" />
     <resource type="freemarker" name="edit"
               location="com/handcraftedbits/bamboo/plugin/go/template/goDependencyTaskEdit.ftl" />
+    <resource type="download" name="icon" location="com/handcraftedbits/bamboo/plugin/go/image/plugin-logo.png" />
+  </taskType>
+
+  <!-- Go Glide task -->
+  <taskType key="task.go.glide" name="Glide Dependency Fetcher"
+            class="com.handcraftedbits.bamboo.plugin.go.task.glide.GoGlideTaskType">
+    <description>Fetches Go project dependencies</description>
+    <category name="builder" />
+    <help link="task.glide.help.link" title="task.glide.help.text" />
+
+    <configuration class="com.handcraftedbits.bamboo.plugin.go.task.glide.GoGlideTaskConfigurator" />
+    <resource type="freemarker" name="edit"
+              location="com/handcraftedbits/bamboo/plugin/go/template/goGlideTaskEdit.ftl" />
     <resource type="download" name="icon" location="com/handcraftedbits/bamboo/plugin/go/image/plugin-logo.png" />
   </taskType>
 
